@@ -1,0 +1,100 @@
+:root{
+    --light-green: hsl(148, 38%, 91%);
+    --medium-green: hsl(169, 82%, 27%);
+    --red: hsl(0,66%,54%);
+    --white: hsl(0, 0%, 100%);
+    --medium-grey: hsl(186, 15%, 59%);
+    --dark-grey: hsl(187, 24%, 22%);
+}
+
+@font-face {
+    font-family: karla;
+    src: url(assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: karla-italic;
+    src: url(assets/fonts/Karla-Italic-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: karla;
+    background-color: var(--light-green);
+}
+
+.wrapper{
+    background-color: var(--white);
+    width: 22rem;
+    border-radius: 10px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLabel{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+input[type=text],
+input[type=email]{
+    width: 20rem;
+    height: 50px;
+    border-radius: 10px;
+    margin-block: 10px;
+}
+
+.options{
+    border: black solid 1px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-block: 15px;
+    padding-left: 20px;
+}
+
+.options label{
+    padding-left: 15px;
+}
+
+input[type=checkbox]{
+    margin-block: 20px;
+}
+
+textarea{
+    width: 20rem;
+    height: 200px;
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    width: 20rem;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--medium-green);
+    font-size: 1rem;
+    color: white;
+    font-family: karla;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+.attribution{
+    font-size: .688rem;
+    text-align: center;
+}
+
+.attribution a{
+    color: hsl(228,48%,44%);
+}
