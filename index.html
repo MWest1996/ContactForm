@@ -14,17 +14,17 @@
             <div class="inputField">
                 <label for="fname" class="inputLabel">First Name <span>*</span></label> <br>
                 <input type="text" name="fname" id="fname">
-                <span class="warning">This field is required</span>
+                <span class="warning" id="fnameWarning"></span>
             </div>
             <div class="inputField">
                 <label for="lname" class="inputLabel">Last Name <span>*</span></label><br>
                 <input type="text" name="lname" id="lname">
-                <span class="warning">This field is required</span>
+                <span class="warning" id="lnameWarning"></span>
             </div>
             <div class="inputField">
                 <label for="email" class="inputLabel">Email Address <span>*</span></label><br>
                 <input type="email" name="email" id="email">
-                <span class="warning">This field is required</span>
+                <span class="warning" id="emailWarning"></span>
             </div>
 
             <div class="inputField">
@@ -37,18 +37,18 @@
                     <input type="radio" id="support" name="queryType" value="support">
                     <label for="support">Support Request</label><br>
                 </div>
-                <span class="warning">Please select a query type</span>
+                <span class="warning" id="queryWarning"></span>
             </div>
 
             <label for="question" class="inputField">Message <span>*</span></label><br>
             <textarea name="question" id="question" placeholder="Write your text here">
             </textarea>
-            <span class="warning">This field is required</span>
+            <span class="warning" id="messageWarning"></span>
             <br>
             <div class="consent">
                 <input type="checkbox" name="consent" id="consent">
                 <label for="consent">I consent to being contacted by the team. <span>*</span></label>
-                <span class="warning">To submit this form, please consent to being contacted</span>
+                <span class="warning" id="consentWarning"></span>
             </div><br>
             <input type="submit" value="Submit">
         </div>
