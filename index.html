@@ -12,20 +12,23 @@
         <h1>Contact Us</h1><br>
         <div class="form">
             <div class="inputField">
-                <label for="firstname" class="inputLabel">First Name</label> <br>
-                <input type="text" name="firstname" id="firstname">
+                <label for="fname" class="inputLabel">First Name <span>*</span></label> <br>
+                <input type="text" name="fname" id="fname">
+                <span class="warning">This field is required</span>
             </div>
             <div class="inputField">
-                <label for="lastname" class="inputLabel">Last Name</label><br>
-                <input type="text" name="lastname" id="lastname">
+                <label for="lname" class="inputLabel">Last Name <span>*</span></label><br>
+                <input type="text" name="lname" id="lname">
+                <span class="warning">This field is required</span>
             </div>
             <div class="inputField">
-                <label for="email" class="inputLabel">Email Address</label><br>
+                <label for="email" class="inputLabel">Email Address <span>*</span></label><br>
                 <input type="email" name="email" id="email">
+                <span class="warning">This field is required</span>
             </div>
 
-            <div class="querytypeField">
-                <p class="inputLabel">Query Type</p>
+            <div class="inputField">
+                <p class="inputLabel">Query Type <span>*</span></p>
                 <div class="options">
                     <input type="radio" id="general" name="queryType" value="general">
                     <label for="general">General Enquiry</label><br>
@@ -34,15 +37,18 @@
                     <input type="radio" id="support" name="queryType" value="support">
                     <label for="support">Support Request</label><br>
                 </div>
+                <span class="warning">Please select a query type</span>
             </div>
 
-            <label for="question" class="inputField">Message</label><br>
+            <label for="question" class="inputField">Message <span>*</span></label><br>
             <textarea name="question" id="question" placeholder="Write your text here">
             </textarea>
+            <span class="warning">This field is required</span>
             <br>
             <div class="consent">
                 <input type="checkbox" name="consent" id="consent">
-                <label for="consent">I consent to being contacted by the team.</label>
+                <label for="consent">I consent to being contacted by the team. <span>*</span></label>
+                <span class="warning">To submit this form, please consent to being contacted</span>
             </div><br>
             <input type="submit" value="Submit">
         </div>

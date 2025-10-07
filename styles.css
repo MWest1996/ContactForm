@@ -26,18 +26,28 @@
 body{
     font-family: karla;
     background-color: var(--light-green);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
 }
 
 .wrapper{
     background-color: var(--white);
     width: 22rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     margin: auto;
     justify-content: center;
     align-items: center;
-    height: 95vh;
     display: flex;
     flex-direction: column;
+}
+
+h1{
+    align-self: start;
+    margin-left: 1.25rem;
+    margin-block: .75rem;
 }
 
 .inputLabel{
@@ -45,42 +55,61 @@ body{
     font-size: 1rem;
 }
 
+.inputLabel span{
+    font-size: .95rem;
+    margin-left: .5rem;
+    color: var(--medium-green);
+}
+
+.inputField{
+    padding-left: .5rem;
+}
+
 input[type=text],
 input[type=email]{
-    width: 20rem;
-    height: 50px;
-    border-radius: 10px;
-    margin-block: 10px;
+    width: 19.5rem;
+    height: 3.125rem;
+    border-radius: 0.625rem;
+    margin-bottom: 1.25rem;
+    margin-top: .75rem;
 }
 
 .options{
-    border: black solid 1px;
-    height: 50px;
+    border: black solid 0.063rem;
+    height: 3.125rem;
     display: flex;
     align-items: center;
-    border-radius: 5px;
-    margin-block: 15px;
-    padding-left: 20px;
+    border-radius: 0.625rem;
+    margin-block: 0.938rem;
+    padding-left: 1.25rem;
+    width: 19.5rem;
 }
 
 .options label{
-    padding-left: 15px;
+    padding-left: 0.938rem;
+}
+
+.warning{
+    display: none;
 }
 
 input[type=checkbox]{
-    margin-block: 20px;
+    margin-block: 1.25rem;
+    margin-left: .5rem;
 }
 
 textarea{
-    width: 20rem;
-    height: 200px;
-    border-radius: 5px;
+    width: 19.5rem;
+    height: 12.5rem;
+    border-radius: 0.625rem;
+    margin-top: .5rem;
+    margin-left: .5rem;
 }
 
 input[type=submit]{
-    width: 20rem;
-    height: 50px;
-    border-radius: 5px;
+    width: 19.5rem;
+    height: 3.125rem;
+    border-radius: 0.625rem;
     background-color: var(--medium-green);
     font-size: 1rem;
     color: white;
@@ -88,6 +117,8 @@ input[type=submit]{
     font-weight: 700;
     cursor: pointer;
     border: none;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .attribution{
