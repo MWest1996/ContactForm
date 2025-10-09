@@ -26,10 +26,10 @@
 body{
     font-family: karla;
     background-color: var(--light-green);
-    height: 100vh;
     display: flex;
+    height: 100vh;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     margin: auto;
 }
 
@@ -46,7 +46,7 @@ body{
 
 h1{
     align-self: start;
-    margin-left: 1.25rem;
+    padding: 1rem;
     margin-block: .75rem;
 }
 
@@ -55,7 +55,7 @@ h1{
     font-size: 1rem;
 }
 
-.inputLabel span{
+.required{
     font-size: .95rem;
     margin-left: .5rem;
     color: var(--medium-green);
@@ -63,6 +63,7 @@ h1{
 
 .inputField{
     padding-left: .5rem;
+    margin-left: .5rem;
 }
 
 input[type=text],
@@ -91,6 +92,12 @@ input[type=email]{
 
 .warning{
     display: none;
+    color: var(--red);
+    font-weight: 400;
+}
+
+#messageWarning{
+    margin-left: 1rem;
 }
 
 input[type=checkbox]{
@@ -103,7 +110,7 @@ textarea{
     height: 12.5rem;
     border-radius: 0.625rem;
     margin-top: .5rem;
-    margin-left: .5rem;
+    margin-left: 1rem;
 }
 
 input[type=submit]{
@@ -121,6 +128,10 @@ input[type=submit]{
     margin-bottom: 1rem;
 }
 
+.consent{
+    margin: 1rem
+}
+
 .attribution{
     font-size: .688rem;
     text-align: center;
@@ -128,4 +139,45 @@ input[type=submit]{
 
 .attribution a{
     color: hsl(228,48%,44%);
+}
+
+@media (min-width: 500px){
+    .wrapper{
+        width: 45.938rem;
+        height: auto;
+    }
+
+    .queryBlock{
+        display: flex;
+        flex-direction: row;
+    } 
+
+    input[type=email]{
+        width: 40rem;
+    }
+
+    .options{
+        margin: auto;
+        margin-block: 1rem;
+    }
+
+    textarea{
+        height: 6.438rem;
+        width: 40rem;
+    }
+
+    input[type=submit]{
+        width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inputField{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .messageLabel{
+        flex-direction: row;
+    }
 }
