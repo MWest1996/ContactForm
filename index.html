@@ -8,25 +8,29 @@
     <title>Frontend Mentor | Contact form</title>
 </head>
 <body>
+    <div class="notification">
+        <h4><img src="assets/images/icon-success-check.svg" alt="">Message Sent!</h4>
+        <p>Thanks for complete the form. We'll be in touch soon!</p>
+    </div>
     <div class="wrapper">
         <form id="form">
             <h1>Contact Us</h1><br>
                 <div class="queryBlock">
                     <div class="inputField">
-                        <label for="fname" class="inputLabel">First Name <span class="required">*</span></label> <br>
+                        <label for="fname" class="inputLabel">First Name <span class="required">*</span></label>
                         <input type="text" name="fname" id="fname">
-                        <span class="warning" id="fnameWarning">This field is required</span>
+                        <span class="warning" id="fnameWarning"></span>
                     </div>
                     <div class="inputField">
-                        <label for="lname" class="inputLabel">Last Name <span class="required">*</span></label><br>
+                        <label for="lname" class="inputLabel">Last Name <span class="required">*</span></label>
                         <input type="text" name="lname" id="lname">
-                        <span class="warning" id="lnameWarning">This field is required</span>
+                        <span class="warning" id="lnameWarning"></span>
                     </div>
                 </div>
                 <div class="inputField">
-                    <label for="email" class="inputLabel">Email Address <span class="required">*</span></label><br>
+                    <label for="email" class="inputLabel">Email Address <span class="required">*</span></label>
                     <input type="email" name="email" id="email">
-                    <span class="warning" id="emailWarning">Please enter a valid email address</span>
+                    <span class="warning" id="emailWarning"></span>
                 </div>
 
                 <div class="inputField">
@@ -41,20 +45,19 @@
                             <label for="support">Support Request</label><br>
                         </div>
                     </div>
-                    <span class="warning" id="queryWarning">Please select a query type</span>
+                    <span class="warning" id="queryWarning"></span>
                 </div>
 
                 <label for="question" class="inputField messageLabel">Message<span class="required">*</span></label>
                 <textarea name="question" id="question" placeholder="Write your text here">
                 </textarea><br>
-                <span class="warning" id="messageWarning">This field is required</span>
-                <br>
+                <span class="warning" id="messageWarning"></span>
                 <div class="consent">
                     <input type="checkbox" name="consent" id="consent">
                     <label for="consent">I consent to being contacted by the team. <span class="required">*</span></label><br>
-                    <span class="warning" id="consentWarning">To submit this form, please consent to being contacted</span>
-                </div><br>
-                <input type="submit" value="submit" id="submit">
+                    <span class="warning" id="consentWarning"></span>
+                </div>
+                <input type="submit" value="Submit" id="submit">
                 <span id="confirmation"></span>
         </form>
     </div>
