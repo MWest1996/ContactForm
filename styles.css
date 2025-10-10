@@ -24,7 +24,7 @@
 }
 
 body{
-    font-family: karla;
+    font-family: "karla", sans-serif;
     background-color: var(--light-green);
     display: flex;
     height: 100vh;
@@ -51,18 +51,17 @@ body{
 h1{
     align-self: start;
     padding: 1rem;
-    margin-block: .75rem;
 }
 
 .inputLabel{
     font-weight: 400;
     font-size: 1rem;
-    margin-top: 1.25rem;
+    margin-block: 1rem;
 }
 
 .required{
     font-size: .95rem;
-    margin-left: .5rem;
+    margin-left: .2rem;
     color: var(--medium-green);
 }
 
@@ -76,12 +75,14 @@ input[type=email]{
     width: 19.5rem;
     height: 3.125rem;
     border-radius: 0.625rem;
-    /* margin-bottom: 1.25rem; */
-    margin-top: .75rem;
+    border-width: .1rem;
+    border-style: solid;
+    padding: .5rem;
+    /* margin-top: .75rem; */
 }
 
 .options{
-    border: black solid 0.063rem;
+    border: var(--dark-grey) solid 0.063rem;
     height: 3.125rem;
     display: flex;
     align-items: center;
@@ -93,6 +94,20 @@ input[type=email]{
 
 .options label{
     padding-left: 0.938rem;
+}
+
+.options:hover{
+    cursor: pointer;
+}
+
+.invalid{
+    border-color: var(--red);
+}
+
+.invalid:hover,
+.invalid:focus{
+    border-color: var(--medium-green);
+    transition: border .3s;
 }
 
 .warning{
@@ -110,12 +125,15 @@ input[type=checkbox]{
     margin-left: .5rem;
 }
 
-textarea{
+#question{
     width: 19.5rem;
     height: 12.5rem;
     border-radius: 0.625rem;
-    margin-top: .5rem;
+    border-width: .1rem;
     margin-left: 1rem;
+    text-align: left;
+    padding: .75rem;
+    font-size: 1rem;
 }
 
 input[type=submit]{
@@ -133,8 +151,28 @@ input[type=submit]{
     margin-bottom: 2rem;
 }
 
+input[type=submit]:hover{
+    background-color: #0f4945;
+}
+
+input[type=text]:hover,
+input[type=email]:hover,
+#question:hover,
+input[type=text]:focus,
+#question:focus,
+input[type=email]:focus{
+    border-color: var(--medium-green);
+    border-width: .15rem;
+    outline: none;
+}
+
 .consent{
     margin: 1rem
+}
+
+.consent label:hover,
+input[type=checkbox]:hover{
+    cursor: pointer;
 }
 
 .attribution{
@@ -163,11 +201,10 @@ input[type=submit]{
 
     .options{
         margin: auto;
-        margin-block: 1rem;
     }
 
-    textarea{
-        height: 6.438rem;
+    #question{
+        height: 5.375rem;
         width: 40rem;
     }
 
@@ -182,5 +219,6 @@ input[type=submit]{
 
     .messageLabel{
         flex-direction: row;
+        margin-block: 1rem
     }
 }

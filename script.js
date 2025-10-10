@@ -20,19 +20,19 @@ let emailErr = document.getElementById("emailWarning");
 let queryErr = document.getElementById("queryWarning")
 let consentErr = document.getElementById("consentWarning");
 let messageErr = document.getElementById("messageWarning");
-let confirmation = document.getElementById("confirmation")
+let confirmation = document.getElementById("confirmation");
 
 let validateFname = () => {
     let value = fname.value.trim();
     if (value < 1){
         fnameErr.textContent = "Please enter a valid name";
         fnameErr.style.display = "block";
-        fname.style.borderColor = "hsl(0,66%,54%)";
+        fname.classList.add('invalid');
         return false
     } else {
         fnameErr.textContent = "";
         fnameErr.style.display = "none";
-        fname.style.borderColor = "black"
+        fname.classList.remove('invalid')
         return true
     }
 }
@@ -42,12 +42,12 @@ let validateLname = () => {
     if (value < 1){
         lnameErr.textContent = "Please enter a valid name";
         lnameErr.style.display = "block";
-        lname.style.borderColor = "hsl(0,66%,54%)";
+        lname.classList.add('invalid');
         return false
     } else {
         lnameErr.textContent = "";
         lnameErr.style.display = "none";
-        lname.style.borderColor = "black"
+        lname.classList.remove('invalid');
         return true
     }
 }
@@ -57,12 +57,12 @@ let validateEmail = () => {
     if (value < 1) {
         emailErr.textContent = "Please enter a valid email address";
         emailErr.style.display = "block";
-        email.style.borderColor = "hsl(0,66%,54%)"
+        email.classList.add('invalid');
         return false
     } else {
         emailErr.textContent = "";
         emailErr.style.display = "none";
-        email.style.borderColor = "black"
+        email.classList.remove('invalid');
         return true
     }
 }
@@ -98,12 +98,12 @@ let validateMessage = () => {
     if (value < 1) {
         messageErr.textContent = "This field is required";
         messageErr.style.display = "block";
-        message.style.borderColor = "hsl(0,66%,54%)"
+        message.classList.add('invalid');
         return false
     } else {
         messageErr.textContent = "";
         messageErr.style.display = "none";
-        message.style.borderColor = "black"
+        message.classList.remove('invalid');
         return true
     }
 }
@@ -119,38 +119,6 @@ form.addEventListener('submit', function(e) {
     let queryValid = validateQuery();
 
     if (fnameValid && lnameValid && emailValid && consentValid && messageValid && queryValid) {
-        alert("Thanks for complete the form. We'll be in touch soon!");
+        alert("Thanks for completing the form. We'll be in touch soon!");
     } 
 })
-//     fnameErr.textContent = "";
-//     lnameErr.textContent = "";
-//     emailErr.textContent = "";
-//     queryErr.textContent = "";
-//     consentErr.textContent = "";
-//     messageErr.textContent = "";
-
-//     if (fname.value.trim() === "") {
-//         fnameErr.textContent = "This field is required";
-//         isValid = false;
-//     }
-
-//     if (lname.value.trim() === "") {
-//         lnameErr.textConent = "This field is required";
-//         isValid = false;
-//     }
-
-//     if (email.value.trim() === "" || !email.value.includes("@") || !email.value.includes(".")) {
-//         emailErr.textConent = "Please enter a valid email address";
-//         isValid = false;
-//     }
-
-//     if (!isChecked) {
-//         consentErr.textContent = "To submit this form, please consent to being contacted";
-//         isValid = false;
-//     }
-
-//     if (isValid) {
-//         confirmation.textContent = "Message Sent! Thanks for the completing the form. We'll be in touch soon!";
-//         form.reset();
-//     }
-// });
