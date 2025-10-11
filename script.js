@@ -118,7 +118,13 @@ form.addEventListener('submit', function(e) {
     let messageValid = validateMessage();
     let queryValid = validateQuery();
 
-    if (fnameValid && lnameValid && emailValid && consentValid && messageValid && queryValid) {
-        alert("Thanks for completing the form. We'll be in touch soon!");
+    if (fnameValid && lnameValid && emailValid && consentValid && messageValid && queryValid){
+        confirmation.classList.remove('hide');
+        form.reset();
+
+        setTimeout(()=>{
+            confirmation.classList.add('hide');
+        }, 4000)
+        // alert("Thanks for completing the form. We'll be in touch soon!");
     } 
 })
