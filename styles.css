@@ -168,6 +168,7 @@ input[type=checkbox]{
     text-align: left;
     padding: .75rem;
     font-size: 1rem;
+    resize: none;
 }
 
 input[type=submit]{
